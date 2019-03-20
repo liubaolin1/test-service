@@ -28,7 +28,7 @@ public class TimingTasks {
     /**
      * 定时监测缓存中的数据
      */
-    @Scheduled(cron="0/30 * * * * ? ")
+    //@Scheduled(cron="0/30 * * * * ? ")
     public void Demo1(){
         sid++;
         System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date())+"  定时任务执行"+sid+"次");
@@ -94,7 +94,7 @@ public class TimingTasks {
      * 0 0/5 * * * ?
      * 0 0 0/1 * * ?
      */
-    @Scheduled(cron="0 0/3 * * * ?")
+    //@Scheduled(cron="0 0/3 * * * ?")
     public void crawler(){
         CrawlerProcessor.start();
     }
