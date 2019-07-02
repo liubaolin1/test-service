@@ -312,7 +312,7 @@ public class QrCodeUtil {
         String logoPath = "d:\\abao.jpg";
         String destPath = "d:\\";
         //二维码logo地址
-        String logoPath2 = "src\\main\\java\\com\\demo\\qrcode\\abao.jpg";
+        String logoPath2 = "src\\main\\java\\com\\demo\\qrcode\\jiage.jpg";
         //生成二维码地址
         String destPath2 = "src\\main\\java\\com\\demo\\qrcode";
         QrCodeUtil.encode(text, logoPath2, destPath2, true);

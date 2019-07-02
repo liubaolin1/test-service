@@ -1,0 +1,19 @@
+server:
+  port: 8080
+qlik:
+  sense:
+    url: http://10.37.148.36:8080/edata-web/SenseSSO/splitJointUrl
+    serverUrl: /sense/app/c55cfa6c-f3c5-43b8-a3fa-e40e1adde5ad/sheet/a289e9ae-817d-43e6-8183-f226b2650dfb/state/analysis
+xinge:
+  xingeOpen: true
+  xingeAccessId: 2100307354
+  xingeServerkey: 47356d4e302b159c0bfa1f1b10ce00bb
+spring:
+  freemarker:
+    template-loader-path: classpath:/templates/
+    suffix: .ftl
+    content-type: text/html
+    charset: UTF-8
+    settings:
+      number_format: '0.##'
+
