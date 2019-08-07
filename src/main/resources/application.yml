@@ -16,4 +16,13 @@ spring:
     charset: UTF-8
     settings:
       number_format: '0.##'
+  datasource:
+          name: zhyy
+          dbType: mysql
+          url: jdbc:mysql://10.39.1.244:3306/mi-pre?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false
+          username: mi
+          password: mi
+          #username: sopreader
+          #password: sopreader1234
+          driver-class-name: com.mysql.jdbc.Driver
 

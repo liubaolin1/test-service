@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+	<classPathEntry location="C:\\software\\maven\\apache-maven-3.5.2\\repo\\mysql\\mysql-connector-java\\5.1.41\\mysql-connector-java-5.1.41.jar" />
+	<!--  用来指定产生一组对象的环境，多个数据库，就建立多个 context。  -->
+	<context id="context1">
+		<property name="javaFileEncoding" value="UTF-8"/>
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<!-- 连接数据库 -->
+		<jdbcConnection
+		driverClass="com.mysql.jdbc.Driver"
+		connectionURL="jdbc:mysql://10.39.1.244:3306/mi-pre?zeroDateTimeBehavior=convertToNull&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true"
+		userId="mi"
+		password="mi" />
+		<!-- 生成model  -->
+		<javaModelGenerator
+			targetPackage="com.demo.entity"
+			targetProject="src/main/java" />
+		<!-- 生成dao  -->
+		<sqlMapGenerator targetPackage="com.demo.dao"
+			targetProject="src/main/java" />
+		<!-- 生成xml  -->
+		<javaClientGenerator targetPackage="com.demo.dao"
+			targetProject="src/main/resources" type="XMLMAPPER" />
+		<!-- <table schema="" tableName="DEPT"> -->
+		<!-- 去除一列，这样 PASSWORD这列就不会生成 -->
+		<!-- <ignoreColumn column="PASSWORD"/> -->
+		<!-- 将数据库字段对应成POJO里面的字段。-->
+		<!-- <columnOverride column="USERID" property="userid" /> -->
+		<!-- </table> -->
+		<table tableName="news" domainObjectName="News"
+			enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false"
+			selectByExampleQueryId="false">
+		</table>
+
+
+	</context>
+</generatorConfiguration>
